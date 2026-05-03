@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #13203f 0%, #050816 60%);
+  color: #f4f8ff;
+}
+
+.hud {
+  position: fixed;
+  z-index: 10;
+  inset: 0 auto auto 0;
+  width: min(420px, calc(100% - 2rem));
+  margin: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(125, 249, 255, 0.35);
+  border-radius: 18px;
+  background: rgba(6, 10, 26, 0.78);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+}
+
+.hud h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.hud p {
+  margin: 0.2rem 0;
+  line-height: 1.45;
+  color: #d8e3ff;
+}
+
+.hud__stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.hud__buttons {
+  display: grid;
+  gap: 0.6rem;
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #04111e;
+  background: linear-gradient(135deg, #7df9ff 0%, #5aa9ff 100%);
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+  box-shadow: 0 10px 24px rgba(90, 169, 255, 0.35);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+kbd {
+  padding: 0.12rem 0.35rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
